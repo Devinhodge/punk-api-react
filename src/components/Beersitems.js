@@ -10,14 +10,14 @@ state = {
 likedPress = () => this.setState({liked: !this.state.liked})
   render()  {
     const buttonMessage = this.state.liked ? 'Unlike' : 'Like'
-    const buttonColor = this.state.liked ? 'green' : 'white'
+    const buttonColor = this.state.liked ? '#ff7575' : 'white'
     return (
         <div style={{color: 'purple', textAlign: 'center'}}>
             <p style={{color: 'black', textAlign: 'center', }}>{this.props.info.name}</p>
             <p style={{textAlign: 'center'}}>{this.props.info.tagline}</p>
-            <button onClick={this.likedPress} style={{backgroundColor:'`${buttonColor}`', width: 'fit-content', color: 'black'}}>{buttonMessage}</button>
+            <button onClick={this.likedPress} style={{backgroundColor: `${buttonColor}`, width: '50px', color: 'black', fontWeight: 'bold'}}>{buttonMessage}</button>
         </div>
     )
-}
+    }
 }
 export default Beersitems;
